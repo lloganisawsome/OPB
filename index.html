@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPB Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      background: #1a1a1a;
+      border: 1px solid #444;
+      color: #f2f2f2;
+      font-size: 16px;
+    }
+    .hidden {
+      display: none;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+    }
+    h1 {
+      color: #00ffff;
+    }
+    code {
+      white-space: pre-wrap;
+      background-color: #111;
+      padding: 10px;
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+<div id="login" class="center">
+  <h1>OPB Command Access</h1>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Enter</button>
+</div>
+
+<div id="homepage" class="hidden container">
+  <h1>[ OPERATION BLUE - TERMINAL ACCESS ]</h1>
+  <h2>Terminal Overview</h2>
+  <code>
+Classified document. For Operation Blue agents only. This log contains creative tactics, device workarounds, and household interference ops.
+  </code>
+
+  <h2>Bypass Techniques</h2>
+  <code>
+- Use phone with wireless keyboard/mouse on TV input
+- Mirror iPhone to Mac (macOS Sonoma+)
+- Bluetooth keyboards = silent control
+- Label devices as media tools to reduce suspicion
+  </code>
+
+  <h2>Appliance Interaction</h2>
+  <code>
+- Pretend oven timer is a Tetris game
+- Narrate pretend gameplay using appliance beeps
+- Washer buttons = game controller
+  </code>
+
+  <h2>Net-Level Disruption</h2>
+  <code>
+- Block M's devices from Wi-Fi
+- Change network name to something weird
+- Echo routines play washer dings
+- Control smart lights + audio chaos
+  </code>
+
+  <h2>Environmental Disruption</h2>
+  <code>
+- Slightly move things in M's room
+- Hide speakers w/ power banks
+- Trigger spa bubble jets randomly
+  </code>
+
+  <h2>Communication Codes</h2>
+  <code>
+B = Operation Blue
+ME = Meeting
+C = Chill
+M = Mom
+D = Dad
+Example: "B ME C M D near" = Be chill, parents near, meet up
+  </code>
+</div>
+
+<script>
+function login() {
+  const user = document.getElementById('username').value.toLowerCase();
+  const pass = document.getElementById('password').value;
+  if ((user === 'logan' || user === 'lincoln') && pass === 'opb') {
+    document.getElementById('login').classList.add('hidden');
+    document.getElementById('homepage').classList.remove('hidden');
+  } else {
+    alert('Access Denied. Unauthorized login.');
+  }
+}
+</script>
+</body>
+</html>
